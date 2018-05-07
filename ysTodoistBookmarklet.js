@@ -24,8 +24,8 @@
     mode=0;
     //現在選択中の日付を退避
     fselect=$('#filter').val();
-    //タスク取得
-    tlist=$('.task_item:not(.checked,.history_item)');
+    //タスク取得(インデント1のみ取得)
+    tlist=$('.task_item.indent_1:not(.checked,.history_item)');
     //日付ヘッダーになっている要素を取得
     dlist=tlist.find('.div_due_date .date');
     if(!dlist.length&&$('.h2_date').length>1){
