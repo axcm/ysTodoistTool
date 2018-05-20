@@ -9,13 +9,13 @@
 下記の形式で作成したコードをブックマークに追加し、WEB版のTodoistページで実行します
 
 ```
-javascript:[ysTodoistBookmarklet.min.jsのコード]
+javascript:void [ysTodoistBookmarklet.min.jsのコード]
 ```
 
 もしくは、下記コードをブックマークレットとすることで、最新のysTodistBookmaeklet.jsを利用します。（github上のjsを参照する）
 
 ```
-javascript:!function(d,s){s=d.createElement("script");s.src="https://rawgit.com/guutarayossiy/ysTodoistTool/master/ysTodoistBookmarklet.js";d.body.appendChild(s)}(document)
+javascript:void function(d,s){s=d.createElement("script");s.src="https://cdn.rawgit.com/axcm/ysTodoistTool/master/ysTodoistBookmarklet.min.js";d.body.appendChild(s)}(document)
 ```
 
 ## 作成の経緯とか

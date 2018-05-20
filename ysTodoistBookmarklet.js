@@ -3,15 +3,14 @@
   Copyright (c) 2016 Yoshiaki Ogata
   version:1.1.1
  */
-!function(d,f,s){
+void(function(d,f,s){
   s=d.createElement("script");
   s.src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js";
   s.onload=function(){
     f(jQuery.noConflict(1))
   };
   d.body.appendChild(s)
-}
-(document,function($){
+}(document,function($){
   //初期化
   $('#mtime-outer').remove();
   $('body').append('<div id="mtime-outer" style="position:fixed;bottom:0;right:0;padding:20px;background-color:#eee;"><p>フィルタ：<select id="filter" style="background-color:#FFF;"><option value="ALL">ALL</option></select></p><p>開始時間：<input type="checkbox" name="chkstime" id="chkstime" /><input type="time" name="starttime" id="starttime" value="09:30" disabled /></p><p>　残件数：<span id="task-cnt"></span>件</p><p>見積時間：<span id="mtime-hour"></span>h (<span id="mtime"></span>m)</p><p style="font-weight:bold;">完了見込：<span id="kantime"></span></p></div>');
@@ -139,4 +138,4 @@
   $('#filter').change(function(){$('#filter').blur();mjikan()});
   $('#filter').focus(function(){changeflg=1});
   $('#filter').blur(function(){changeflg=0});
-})
+}));
